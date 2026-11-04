@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nirvana Natures | Land Development & Agricultural Consultancy</title>
+    <title>Nivarna Natures | Land Development & Agricultural Consultancy</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -17,396 +17,59 @@
             --border: #e2e8f0;
             --white: #ffffff;
         }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--light);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
-
-        /* Top Bar */
-        .top-bar {
-            background-color: var(--dark);
-            color: #d1fae5;
-            padding: 8px 5%;
-            font-size: 0.85rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .top-bar a {
-            color: #d1fae5;
-            text-decoration: none;
-            margin-left: 15px;
-        }
-
-        /* Navigation */
-        header {
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(8px);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            padding: 12px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .brand-container {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
-
-        .brand-container img {
-            height: 48px;
-            width: auto;
-            border-radius: 6px;
-        }
-
-        .brand-text h1 {
-            font-size: 1.35rem;
-            font-weight: 800;
-            color: var(--primary);
-            letter-spacing: -0.5px;
-            line-height: 1.1;
-        }
-
-        .brand-text span {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-
-        .nav-actions {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px 22px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .btn-whatsapp {
-            background-color: var(--accent);
-            color: var(--white);
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-        }
-
-        .btn-whatsapp:hover {
-            background-color: #1ebc59;
-            transform: translateY(-2px);
-        }
-
-        .btn-primary {
-            background-color: var(--primary);
-            color: var(--white);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--primary-light);
-        }
-
-        /* Hero Banner */
-        .hero {
-            position: relative;
-            background: linear-gradient(rgba(15, 31, 24, 0.78), rgba(15, 31, 24, 0.85)), url('hero-banner.jpg') center/cover no-repeat;
-            color: var(--white);
-            padding: 100px 5% 90px;
-            text-align: center;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .hero-badge {
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            color: #d1fae5;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-
-        .hero h2 {
-            font-size: 2.8rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 1.15rem;
-            color: #e2e8f0;
-            margin-bottom: 35px;
-            max-width: 750px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        /* Section Container */
-        .section {
-            padding: 80px 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 55px;
-        }
-
-        .section-header h3 {
-            font-size: 2.1rem;
-            color: var(--primary);
-            font-weight: 800;
-            margin-bottom: 12px;
-        }
-
-        .section-header p {
-            color: var(--text-muted);
-            font-size: 1rem;
-        }
-
-        /* Showcase Cards */
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: var(--white);
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-        }
-
-        .card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-
-        .card-body {
-            padding: 25px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card-tag {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            font-weight: 700;
-            color: var(--primary-light);
-            margin-bottom: 8px;
-        }
-
-        .card-body h4 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 12px;
-        }
-
-        .card-body p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            line-height: 1.5;
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-
-        /* Founder Profile Section */
-        .founder-box {
-            background: var(--white);
-            border-radius: 20px;
-            border: 1px solid var(--border);
-            overflow: hidden;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.04);
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 40px;
-            padding: 40px;
-        }
-
-        .founder-img-wrapper {
-            flex-shrink: 0;
-            width: 240px;
-            height: 240px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 4px solid #d1fae5;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
-
-        .founder-img-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center top;
-        }
-
-        .founder-info h4 {
-            font-size: 1.7rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 5px;
-        }
-
-        .founder-info .role {
-            font-size: 0.95rem;
-            color: var(--primary-light);
-            font-weight: 600;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-
-        .founder-info p {
-            color: var(--text-main);
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        /* Contact Section */
-        .contact-card {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
-            border-radius: 24px;
-            color: var(--white);
-            padding: 60px 40px;
-            text-align: center;
-        }
-
-        .contact-card h3 {
-            font-size: 2.2rem;
-            font-weight: 800;
-            margin-bottom: 15px;
-        }
-
-        .contact-card p {
-            font-size: 1.05rem;
-            color: #d1fae5;
-            max-width: 650px;
-            margin: 0 auto 35px;
-        }
-
-        .contact-details {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            margin-bottom: 35px;
-        }
-
-        .contact-item {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        .contact-item span {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            color: #94a3b8;
-            font-weight: 600;
-        }
-
-        .contact-item a {
-            color: var(--white);
-            font-size: 1.15rem;
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        .contact-item a:hover {
-            color: var(--accent);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--dark);
-            color: #94a3b8;
-            padding: 35px 5%;
-            font-size: 0.85rem;
-            text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.08);
-        }
-
-        footer a {
-            color: #d1fae5;
-            text-decoration: none;
-            margin: 0 8px;
-        }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--light); color: var(--text-main); line-height: 1.6; }
+        .top-bar { background-color: var(--dark); color: #d1fae5; padding: 8px 5%; font-size: 0.85rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .top-bar a { color: #d1fae5; text-decoration: none; margin-left: 15px; }
+        header { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); padding: 12px 5%; display: flex; justify-content: space-between; align-items: center; }
+        .brand-container { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .brand-container img { height: 48px; width: auto; border-radius: 6px; }
+        .brand-text h1 { font-size: 1.35rem; font-weight: 800; color: var(--primary); letter-spacing: -0.5px; line-height: 1.1; }
+        .brand-text span { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 10px 22px; border-radius: 30px; font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: all 0.3s ease; cursor: pointer; }
+        .btn-whatsapp { background-color: var(--accent); color: var(--white); box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); }
+        .btn-whatsapp:hover { background-color: #1ebc59; }
+        .btn-primary { background-color: var(--primary); color: var(--white); }
+        .hero { position: relative; background: linear-gradient(rgba(15, 31, 24, 0.78), rgba(15, 31, 24, 0.85)), url('hero-banner.jpg') center/cover no-repeat; color: var(--white); padding: 100px 5% 90px; text-align: center; }
+        .hero-content { max-width: 900px; margin: 0 auto; }
+        .hero-badge { background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.25); color: #d1fae5; padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; display: inline-block; margin-bottom: 20px; }
+        .hero h2 { font-size: 2.6rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
+        .hero p { font-size: 1.15rem; color: #e2e8f0; margin-bottom: 35px; max-width: 750px; margin-left: auto; margin-right: auto; }
+        .hero-cta { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        .section { padding: 70px 5%; max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 50px; }
+        .section-header h3 { font-size: 2.1rem; color: var(--primary); font-weight: 800; margin-bottom: 12px; }
+        .section-header p { color: var(--text-muted); font-size: 1rem; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .card { background: var(--white); border-radius: 16px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 10px 25px rgba(0,0,0,0.03); display: flex; flex-direction: column; }
+        .card img { width: 100%; height: 220px; object-fit: cover; }
+        .card-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-tag { font-size: 0.75rem; text-transform: uppercase; font-weight: 700; color: var(--primary-light); margin-bottom: 8px; }
+        .card-body h4 { font-size: 1.25rem; font-weight: 700; color: var(--dark); margin-bottom: 12px; }
+        .card-body p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 20px; flex-grow: 1; }
+        .founder-box { background: var(--white); border-radius: 20px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 12px 30px rgba(0,0,0,0.04); display: flex; align-items: center; gap: 40px; padding: 40px; }
+        .founder-img-wrapper { flex-shrink: 0; width: 220px; height: 220px; border-radius: 50%; overflow: hidden; border: 4px solid #d1fae5; }
+        .founder-img-wrapper img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+        .founder-info h4 { font-size: 1.7rem; font-weight: 800; color: var(--primary); margin-bottom: 5px; }
+        .founder-info .role { font-size: 0.95rem; color: var(--primary-light); font-weight: 600; margin-bottom: 15px; }
+        .founder-info p { color: var(--text-main); font-size: 1rem; line-height: 1.6; margin-bottom: 20px; }
+        .contact-card { background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%); border-radius: 24px; color: var(--white); padding: 50px 30px; text-align: center; }
+        .contact-card h3 { font-size: 2.1rem; font-weight: 800; margin-bottom: 15px; }
+        .contact-card p { font-size: 1.05rem; color: #d1fae5; max-width: 650px; margin: 0 auto 30px; }
+        .contact-details { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-bottom: 30px; }
+        .contact-item span { font-size: 0.85rem; text-transform: uppercase; color: #94a3b8; display: block; margin-bottom: 5px; }
+        .contact-item a { color: var(--white); font-size: 1.15rem; font-weight: 700; text-decoration: none; }
+        footer { background-color: var(--dark); color: #94a3b8; padding: 30px 5%; font-size: 0.85rem; text-align: center; }
+        footer a { color: #d1fae5; text-decoration: none; margin: 0 8px; }
         @media (max-width: 850px) {
-            .founder-box {
-                flex-direction: column;
-                text-align: center;
-                padding: 25px;
-            }
-            .hero h2 {
-                font-size: 2.1rem;
-            }
-            .top-bar {
-                justify-content: center;
-                text-align: center;
-            }
+            .founder-box { flex-direction: column; text-align: center; padding: 25px; }
+            .hero h2 { font-size: 2rem; }
+            .top-bar { justify-content: center; text-align: center; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Top Contact Bar -->
     <div class="top-bar">
         <div>
             <span>📍 Sitapur, Uttar Pradesh (UP)</span>
@@ -418,7 +81,6 @@
         </div>
     </div>
 
-    <!-- Main Navigation -->
     <header>
         <a href="#" class="brand-container">
             <img src="logo.png" alt="Nivarna Natures Logo">
@@ -427,81 +89,69 @@
                 <span>Land Development & Agroforestry</span>
             </div>
         </a>
-        <div class="nav-actions">
-            <a href="https://wa.me/919214141611?text=नमस्ते%20जितेंद्र%20जी%2C%20मुझे%20लैंड%20डेवलपमेंट%20और%20एग्रोफॉरेस्ट्री%20कंसल्टेंसी%20के%20बारे%20में%20जानकारी%20चाहिए।" target="_blank" class="btn btn-whatsapp">
+        <div>
+            <a href="https://wa.me/919214141611?text=नमस्ते%20जितेंद्र%20जी%2C%20मुझे%20लैंड%20डेवलपमेंट%20कंसल्टेंसी%20के%20बारे%20में%20बात%20करनी%20है।" target="_blank" class="btn btn-whatsapp">
                 WhatsApp Chat
-            </a>
-            <a href="tel:9214141611" class="btn btn-primary" style="display: none; @media(min-width: 600px){display: inline-flex;}">
-                Call Now
             </a>
         </div>
     </header>
 
-    <!-- Hero Banner Section -->
     <section class="hero">
         <div class="hero-content">
             <div class="hero-badge">Sustainable Land Reclamation & High-Density Agroforestry</div>
             <h2>कछार और बंजर भूमि को बनाएं सुरक्षित, उपजाऊ और बहुमूल्य ग्रीन एसेट</h2>
-            <p>हम बड़े पैमाने पर व्यावसायिक यूकेलिप्टस, खस (Vetiver), बायो-फेंसिंग और सोलर आधारित तकनीकी निगरानी द्वारा आधुनिक फार्म लैंड विकसित करते हैं।</p>
+            <p>व्यावसायिक यूकेलिप्टस, खस (Vetiver), थूहर बायो-फेंसिंग और सोलर आधारित तकनीकी निगरानी द्वारा आधुनिक फार्म लैंड विकास।</p>
             <div class="hero-cta">
                 <a href="https://wa.me/919214141611?text=नमस्ते%20Nivarna%20Natures%2C%20मुझे%20प्रोजेक्ट%20प्लानिंग%20हेतु%20सलाह%20चाहिए।" target="_blank" class="btn btn-whatsapp" style="font-size: 1rem; padding: 14px 28px;">
                     सीधे व्हाट्सएप पर संपर्क करें
-                </a>
-                <a href="#services" class="btn btn-primary" style="border: 1px solid rgba(255,255,255,0.3); font-size: 1rem; padding: 14px 28px;">
-                    हमारी सेवाएँ देखें
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Services / Projects Showcase -->
     <section class="section" id="services">
         <div class="section-header">
             <h3>हमारी मुख्य विशेषज्ञता और प्रोजेक्ट्स</h3>
-            <p>ज़मीन सुधार से लेकर बायो-सिक्योरिटी और कमर्शियल प्लांटेशन तक, व्यावहारिक फील्ड अनुभव पर आधारित परिणाम।</p>
+            <p>ज़मीन सुधार से लेकर बायो-सिक्योरिटी और कमर्शियल प्लांटेशन तक ज़मीनी अनुभव पर आधारित परिणाम।</p>
         </div>
 
         <div class="grid-3">
-            <!-- Card 1: Katri Reclamation -->
             <div class="card">
-                <img src="katri-model.jpg" alt="Gangetic Floodplain Reclamation">
+                <img src="katri-model.jpg" alt="Floodplain Reclamation">
                 <div class="card-body">
                     <span class="card-tag">Land Reclamation</span>
                     <h4>कटरी व बाढ़-संवेदनशील भूमि विकास</h4>
-                    <p>मूनडिंग (Mounding) तकनीक, गहरी जड़ वाली खस (Vetiver) की मदद से मिट्टी का कटाव रोकना और बाढ़ प्रभावित जमीनों को बहुमूल्य उत्पादन में बदलना।</p>
+                    <p>मूनडिंग तकनीक और गहरी जड़ वाली खस (Vetiver) द्वारा मिट्टी का कटाव रोकना और अनुपयोगी भूमि को उपजाऊ बनाना।</p>
                     <a href="https://wa.me/919214141611?text=Katri%20Land%20Reclamation%20Query" target="_blank" class="btn btn-whatsapp" style="padding: 8px 16px; font-size: 0.85rem;">जानकारी लें</a>
                 </div>
             </div>
 
-            <!-- Card 2: Bio-Fencing & Security -->
             <div class="card">
-                <img src="bio-fencing.jpg" alt="Bio Fencing and Solar Security">
+                <img src="bio-fencing.jpg" alt="Bio Fencing">
                 <div class="card-body">
                     <span class="card-tag">Farm Security</span>
                     <h4>प्राकृतिक बायो-फेंसिंग व सोलर सुरक्षा</h4>
-                    <p>थूहर (Euphorbia) और कैक्टस द्वारा बिना बड़े खर्च की अभेद्य प्राकृतिक बाड़। साथ ही ऑफ-ग्रिड सोलर पावर्ड CCTV पोल्स से खेतों की 24x7 लाइव निगरानी।</p>
+                    <p>थूहर और कैक्टस द्वारा बिना बड़े खर्च की प्राकृतिक बाड़ और ऑफ-ग्रिड सोलर पावर्ड CCTV पोल्स से खेतों की 24x7 निगरानी।</p>
                     <a href="https://wa.me/919214141611?text=Bio-Fencing%20Setup%20Query" target="_blank" class="btn btn-whatsapp" style="padding: 8px 16px; font-size: 0.85rem;">जानकारी लें</a>
                 </div>
             </div>
 
-            <!-- Card 3: Agroforestry Consultancy -->
             <div class="card">
-                <img src="consultancy-banner.jpg" alt="Commercial Timber and Consultancy">
+                <img src="consultancy-banner.jpg" alt="Agroforestry Consultancy">
                 <div class="card-body">
                     <span class="card-tag">Commercial Agroforestry</span>
                     <h4>टिम्बर व हाई-वैल्यू फार्म कंसल्टेंसी</h4>
-                    <p>यूकेलिप्टस, खस, सरसों और बागवानी फसलों की हाई-डेंसिटी प्लानिंग। बड़े निवेशकों, लैंड ओनर्स और फार्महाउस के लिए संपूर्ण एंड-टू-एंड प्रोजेक्ट रिपोर्ट।</p>
+                    <p>यूकेलिप्टस, खस, सरसों और बागवानी फसलों की हाई-डेंसिटी प्लानिंग। बड़े निवेशकों और फार्महाउस के लिए संपूर्ण प्रोजेक्ट प्लानिंग।</p>
                     <a href="https://wa.me/919214141611?text=Agroforestry%20Consultancy%20Query" target="_blank" class="btn btn-whatsapp" style="padding: 8px 16px; font-size: 0.85rem;">कंसल्टेंसी बुक करें</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Founder Section -->
     <section class="section" style="padding-top: 0;">
         <div class="founder-box">
             <div class="founder-img-wrapper">
-                <img src="founder.jpg" alt="Jitendra Mishra - Founder">
+                <img src="founder.jpg" alt="Jitendra Mishra">
             </div>
             <div class="founder-info">
                 <h4>जितेंद्र मिश्रा (Jitendra Mishra)</h4>
@@ -514,23 +164,22 @@
         </div>
     </section>
 
-    <!-- Call to Action Box -->
     <section class="section" style="padding-top: 0;">
         <div class="contact-card">
             <h3>अपनी ज़मीन के विकास के लिए आज ही चर्चा करें</h3>
-            <p>चाहे फार्म लेआउट बनाना हो, कछार की जमीन सुधारनी हो या बड़े पैमाने पर कमर्शियल प्लांटेशन करना हो—हमसे सीधा संपर्क करें।</p>
+            <p>फार्म लेआउट, कछार की जमीन सुधार या बड़े पैमाने पर कमर्शियल प्लांटेशन हेतु सीधा संपर्क करें।</p>
             
             <div class="contact-details">
                 <div class="contact-item">
-                    <span>सीधा फ़ोन नंबर</span>
+                    <span>सीधा संपर्क</span>
                     <a href="tel:9214141611">+91 9214141611</a>
                 </div>
                 <div class="contact-item">
-                    <span>ईमेल आईडी</span>
+                    <span>ईमेल</span>
                     <a href="mailto:nevernanatures@gmail.com">nevernanatures@gmail.com</a>
                 </div>
                 <div class="contact-item">
-                    <span>आधिकारिक लिंक</span>
+                    <span>ऑफिशियल साइट</span>
                     <a href="https://nepalmanet.com" target="_blank">nepalmanet.com</a>
                 </div>
             </div>
@@ -541,7 +190,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>© 2026 Nivarna Natures. All Rights Reserved. | Sitapur, Uttar Pradesh, India</p>
         <p style="margin-top: 8px;">
