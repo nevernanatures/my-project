@@ -1,439 +1,555 @@
-﻿<!DOCTYPE html>
-<html lang="hi" class="scroll-smooth">
+<!DOCTYPE html>
+<html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>नेवरना नेचर्स | Neverna Natures - www.nevernanatures.com</title>
-  <meta name="description" content="नेवरना नेचर्स (Neverna Natures): अपनी खाली या बंजर ज़मीन को बदलें लक्ज़री ग्रीन फार्महाउस, टिंबर एस्टेट या एग्रो-टूरिज्म पार्क में। डे-1 4-कैमरा लाइव CCTV मॉनिटरिंग और 6/12 वर्ष रिटर्न प्लान। आधिकारिक वेबसाइट: www.nevernanatures.com | WhatsApp: 9956207223">
-  <meta name="keywords" content="नेवरना नेचर्स, neverna natures, nevernanatures, nevernanatures.com, www.nevernanatures.com, wasteland development, farmhouse development, agro tourism, timber farming, land leveling, turnkey farm development, barren land recovery">
-  
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    .hero-pattern {
-      background: linear-gradient(rgba(10, 25, 18, 0.82), rgba(15, 23, 42, 0.90)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1200&auto=format&fit=crop');
-      background-size: cover;
-      background-position: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nirvana Natures | Land Development & Agricultural Consultancy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #154734;
+            --primary-light: #206d50;
+            --accent: #25D366;
+            --dark: #0f1f18;
+            --light: #f7faf8;
+            --text-main: #2d3748;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--light);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: var(--dark);
+            color: #d1fae5;
+            padding: 8px 5%;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .top-bar a {
+            color: #d1fae5;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        /* Navigation */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(8px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            padding: 12px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .brand-container img {
+            height: 48px;
+            width: auto;
+            border-radius: 6px;
+        }
+
+        .brand-text h1 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -0.5px;
+            line-height: 1.1;
+        }
+
+        .brand-text span {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--accent);
+            color: var(--white);
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1ebc59;
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-light);
+        }
+
+        /* Hero Banner */
+        .hero {
+            position: relative;
+            background: linear-gradient(rgba(15, 31, 24, 0.78), rgba(15, 31, 24, 0.85)), url('hero-banner.jpg') center/cover no-repeat;
+            color: var(--white);
+            padding: 100px 5% 90px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: #d1fae5;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: #e2e8f0;
+            margin-bottom: 35px;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Section Container */
+        .section {
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 55px;
+        }
+
+        .section-header h3 {
+            font-size: 2.1rem;
+            color: var(--primary);
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Showcase Cards */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--primary-light);
+            margin-bottom: 8px;
+        }
+
+        .card-body h4 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+
+        .card-body p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        /* Founder Profile Section */
+        .founder-box {
+            background: var(--white);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 40px;
+            padding: 40px;
+        }
+
+        .founder-img-wrapper {
+            flex-shrink: 0;
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #d1fae5;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .founder-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .founder-info h4 {
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .founder-info .role {
+            font-size: 0.95rem;
+            color: var(--primary-light);
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .founder-info p {
+            color: var(--text-main);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Contact Section */
+        .contact-card {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            border-radius: 24px;
+            color: var(--white);
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .contact-card h3 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .contact-card p {
+            font-size: 1.05rem;
+            color: #d1fae5;
+            max-width: 650px;
+            margin: 0 auto 35px;
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 35px;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .contact-item span {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: #94a3b8;
+            font-weight: 600;
+        }
+
+        .contact-item a {
+            color: var(--white);
+            font-size: 1.15rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: #94a3b8;
+            padding: 35px 5%;
+            font-size: 0.85rem;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+
+        footer a {
+            color: #d1fae5;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        @media (max-width: 850px) {
+            .founder-box {
+                flex-direction: column;
+                text-align: center;
+                padding: 25px;
+            }
+            .hero h2 {
+                font-size: 2.1rem;
+            }
+            .top-bar {
+                justify-content: center;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
-<body class="bg-stone-50 text-slate-800 font-sans antialiased pb-20">
+<body>
 
-  <!-- Top Info Bar -->
-  <div class="bg-emerald-950 text-stone-300 text-xs py-2.5 px-4 border-b border-emerald-900">
-    <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-2">
-      <div class="flex items-center space-x-4">
-        <span><i class="fa-solid fa-envelope mr-1.5 text-emerald-400"></i> nevernanatures@gmail.com</span>
-        <span><i class="fa-solid fa-globe mr-1.5 text-emerald-400"></i> www.nevernanatures.com</span>
-      </div>
-      <div class="flex items-center space-x-4">
-        <a href="https://wa.me/919956207223?text=नमस्ते%20नेवरना%20नेचर्स,%20मुझे%20अपनी%20ज़मीन%20डेवलप%20कराने%20के%20बारे%20में%20जानकारी%20चाहिए।" target="_blank" class="text-emerald-400 hover:text-emerald-300 font-bold flex items-center">
-          <i class="fa-brands fa-whatsapp mr-1 text-sm text-green-400"></i> +91 9956207223
-        </a>
-        <a href="https://www.youtube.com/@nevernanatures" target="_blank" class="text-red-400 hover:text-red-300 font-semibold flex items-center">
-          <i class="fa-brands fa-youtube mr-1 text-sm"></i> नेवरना नेचर्स (YouTube)
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Header Navigation -->
-  <nav class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-40 border-b border-stone-200">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-      <div class="flex items-center space-x-2.5">
-        <div class="w-10 h-10 bg-emerald-800 rounded-xl flex items-center justify-center text-white font-extrabold text-xl shadow-inner">
-          N
+    <!-- Top Contact Bar -->
+    <div class="top-bar">
+        <div>
+            <span>📍 Sitapur, Uttar Pradesh (UP)</span>
+            <span style="margin-left: 15px;">📞 +91 9214141611</span>
         </div>
         <div>
-          <span class="text-xl font-black text-emerald-950 tracking-tight block leading-tight">नेवरना नेचर्स</span>
-          <span class="text-[10px] block font-bold text-emerald-600 tracking-widest uppercase">www.nevernanatures.com</span>
+            <a href="mailto:nevernanatures@gmail.com">nevernanatures@gmail.com</a>
+            <a href="https://nepalmanet.com" target="_blank">nepalmanet.com</a>
         </div>
-      </div>
-      <div class="flex items-center space-x-2.5">
-        <a href="tel:9956207223" class="hidden sm:inline-flex items-center bg-stone-100 text-stone-800 border border-stone-300 px-3.5 py-2 rounded-lg text-xs font-bold hover:bg-stone-200 transition">
-          <i class="fa-solid fa-phone mr-1.5 text-emerald-700"></i> कॉल करें
-        </a>
-        <a href="#inquiry" class="bg-emerald-800 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg text-xs font-bold shadow-sm transition">
-          प्रोजेक्ट शुरू करें
-        </a>
-      </div>
     </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <header class="hero-pattern text-white py-16 md:py-24 px-4">
-    <div class="max-w-4xl mx-auto text-center space-y-6">
-      <span class="inline-block bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
-        नेवरना नेचर्स • www.nevernanatures.com
-      </span>
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-black leading-tight tracking-tight">
-        अपनी बंजर व कम उत्पादन वाली ज़मीन को बदलें <span class="text-emerald-400">ग्रीन फार्म एस्टेट</span> में
-      </h1>
-      <p class="text-stone-300 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
-        ज़मीन आपकी, विकास और प्रबंधन <strong>नेवरना नेचर्स</strong> का। डे-1 से 4-कैमरा लाइव CCTV एक्सेस, वैज्ञानिक मिट्टी सुधार, एग्रो-टूरिज्म और आकर्षक 6/12 वर्ष रिटर्न प्लान।
-      </p>
-      <div class="pt-3 flex flex-wrap justify-center gap-3">
-        <a href="https://wa.me/919956207223?text=नमस्ते%20नेवरना%20नेचर्स,%20मुझे%20अपनी%20ज़मीन%20डेवलप%20कराने%20है।" target="_blank" class="bg-green-600 hover:bg-green-500 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg text-sm transition flex items-center">
-          <i class="fa-brands fa-whatsapp text-lg mr-2"></i> WhatsApp पर सीधी बात करें
+    <!-- Main Navigation -->
+    <header>
+        <a href="#" class="brand-container">
+            <img src="logo.png" alt="Nivarna Natures Logo">
+            <div class="brand-text">
+                <h1>Nivarna Natures</h1>
+                <span>Land Development & Agroforestry</span>
+            </div>
         </a>
-        <a href="#plans" class="bg-stone-900/80 hover:bg-stone-900 border border-stone-600 text-stone-200 font-bold px-5 py-3.5 rounded-xl text-sm transition flex items-center">
-          <i class="fa-solid fa-chart-line mr-2 text-emerald-400"></i> 6 व 12 वर्ष के प्लान देखें
-        </a>
-      </div>
-    </div>
-  </header>
+        <div class="nav-actions">
+            <a href="https://wa.me/919214141611?text=नमस्ते%20जितेंद्र%20जी%2C%20मुझे%20लैंड%20डेवलपमेंट%20और%20एग्रोफॉरेस्ट्री%20कंसल्टेंसी%20के%20बारे%20में%20जानकारी%20चाहिए।" target="_blank" class="btn btn-whatsapp">
+                WhatsApp Chat
+            </a>
+            <a href="tel:9214141611" class="btn btn-primary" style="display: none; @media(min-width: 600px){display: inline-flex;}">
+                Call Now
+            </a>
+        </div>
+    </header>
 
-  <!-- Transparency & 4-Camera Live Stream Highlight -->
-  <section id="cctv" class="py-12 px-4 max-w-5xl mx-auto -mt-6">
-    <div class="bg-emerald-950 text-white rounded-3xl p-6 md:p-8 shadow-2xl border border-emerald-800">
-      <div class="text-center max-w-2xl mx-auto mb-8">
-        <span class="text-emerald-400 text-xs font-black uppercase tracking-widest bg-emerald-900/60 px-3 py-1 rounded-full">
-          100% पारदर्शी कार्यप्रणाली
-        </span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold mt-3">डे-1 से 4-कैमरा 360° लाइव ब्रॉडकास्ट</h2>
-        <p class="text-stone-300 text-xs sm:text-sm mt-2">
-          काम शुरू होते ही खेत के केंद्र में सोलर/4G पोल पर 4 हाई-डेफिनिशन कैमरे लगाए जाते हैं, ताकि आप दुनिया में कहीं से भी 24×7 लाइव काम देख सकें।
+    <!-- Hero Banner Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Sustainable Land Reclamation & High-Density Agroforestry</div>
+            <h2>कछार और बंजर भूमि को बनाएं सुरक्षित, उपजाऊ और बहुमूल्य ग्रीन एसेट</h2>
+            <p>हम बड़े पैमाने पर व्यावसायिक यूकेलिप्टस, खस (Vetiver), बायो-फेंसिंग और सोलर आधारित तकनीकी निगरानी द्वारा आधुनिक फार्म लैंड विकसित करते हैं।</p>
+            <div class="hero-cta">
+                <a href="https://wa.me/919214141611?text=नमस्ते%20Nivarna%20Natures%2C%20मुझे%20प्रोजेक्ट%20प्लानिंग%20हेतु%20सलाह%20चाहिए।" target="_blank" class="btn btn-whatsapp" style="font-size: 1rem; padding: 14px 28px;">
+                    सीधे व्हाट्सएप पर संपर्क करें
+                </a>
+                <a href="#services" class="btn btn-primary" style="border: 1px solid rgba(255,255,255,0.3); font-size: 1rem; padding: 14px 28px;">
+                    हमारी सेवाएँ देखें
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Projects Showcase -->
+    <section class="section" id="services">
+        <div class="section-header">
+            <h3>हमारी मुख्य विशेषज्ञता और प्रोजेक्ट्स</h3>
+            <p>ज़मीन सुधार से लेकर बायो-सिक्योरिटी और कमर्शियल प्लांटेशन तक, व्यावहारिक फील्ड अनुभव पर आधारित परिणाम।</p>
+        </div>
+
+        <div class="grid-3">
+            <!-- Card 1: Katri Reclamation -->
+            <div class="card">
+                <img src="katri-model.jpg" alt="Gangetic Floodplain Reclamation">
+                <div class="card-body">
+                    <span class="card-tag">Land Reclamation</span>
+                    <h4>कटरी व बाढ़-संवेदनशील भूमि विकास</h4>
+                    <p>मूनडिंग (Mounding) तकनीक, गहरी जड़ वाली खस (Vetiver) की मदद से मिट्टी का कटाव रोकना और बाढ़ प्रभावित जमीनों को बहुमूल्य उत्पादन में बदलना।</p>
+                    <a href="https://wa.me/919214141611?text=Katri%20Land%20Reclamation%20Query" target="_blank" class="btn btn-whatsapp" style="padding: 8px 16px; font-size: 0.85rem;">जानकारी लें</a>
+                </div>
+            </div>
+
+            <!-- Card 2: Bio-Fencing & Security -->
+            <div class="card">
+                <img src="bio-fencing.jpg" alt="Bio Fencing and Solar Security">
+                <div class="card-body">
+                    <span class="card-tag">Farm Security</span>
+                    <h4>प्राकृतिक बायो-फेंसिंग व सोलर सुरक्षा</h4>
+                    <p>थूहर (Euphorbia) और कैक्टस द्वारा बिना बड़े खर्च की अभेद्य प्राकृतिक बाड़। साथ ही ऑफ-ग्रिड सोलर पावर्ड CCTV पोल्स से खेतों की 24x7 लाइव निगरानी।</p>
+                    <a href="https://wa.me/919214141611?text=Bio-Fencing%20Setup%20Query" target="_blank" class="btn btn-whatsapp" style="padding: 8px 16px; font-size: 0.85rem;">जानकारी लें</a>
+                </div>
+            </div>
+
+            <!-- Card 3: Agroforestry Consultancy -->
+            <div class="card">
+                <img src="consultancy-banner.jpg" alt="Commercial Timber and Consultancy">
+                <div class="card-body">
+                    <span class="card-tag">Commercial Agroforestry</span>
+                    <h4>टिम्बर व हाई-वैल्यू फार्म कंसल्टेंसी</h4>
+                    <p>यूकेलिप्टस, खस, सरसों और बागवानी फसलों की हाई-डेंसिटी प्लानिंग। बड़े निवेशकों, लैंड ओनर्स और फार्महाउस के लिए संपूर्ण एंड-टू-एंड प्रोजेक्ट रिपोर्ट।</p>
+                    <a href="https://wa.me/919214141611?text=Agroforestry%20Consultancy%20Query" target="_blank" class="btn btn-whatsapp" style="padding: 8px 16px; font-size: 0.85rem;">कंसल्टेंसी बुक करें</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="section" style="padding-top: 0;">
+        <div class="founder-box">
+            <div class="founder-img-wrapper">
+                <img src="founder.jpg" alt="Jitendra Mishra - Founder">
+            </div>
+            <div class="founder-info">
+                <h4>जितेंद्र मिश्रा (Jitendra Mishra)</h4>
+                <div class="role">संस्थापक — Nivarna Natures | लैंड डेवलपर व एग्रो-कंसल्टेंट</div>
+                <p>सीतापुर (उत्तर प्रदेश) में स्थित, हम किताबी थ्योरी की जगह ज़मीनी स्तर पर काम करने में विश्वास रखते हैं। गंगा कछार के कठिन भूभागों से लेकर हाई-टेक सोलर सिंचाई और बड़े पैमाने पर कमर्शियल एग्रोफॉरेस्ट्री सेटअप तक, हम ज़मीन मालिकों को उनकी संपत्ति का अधिकतम और सुरक्षित रिटर्न दिलाने में मार्गदर्शन करते हैं।</p>
+                <a href="https://wa.me/919214141611?text=नमस्ते%20जितेंद्र%20जी%2C%20मुझे%20आपसे%20बात%20करनी%20है।" target="_blank" class="btn btn-primary" style="padding: 10px 24px;">
+                    सीधे संस्थापक से बात करें
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Box -->
+    <section class="section" style="padding-top: 0;">
+        <div class="contact-card">
+            <h3>अपनी ज़मीन के विकास के लिए आज ही चर्चा करें</h3>
+            <p>चाहे फार्म लेआउट बनाना हो, कछार की जमीन सुधारनी हो या बड़े पैमाने पर कमर्शियल प्लांटेशन करना हो—हमसे सीधा संपर्क करें।</p>
+            
+            <div class="contact-details">
+                <div class="contact-item">
+                    <span>सीधा फ़ोन नंबर</span>
+                    <a href="tel:9214141611">+91 9214141611</a>
+                </div>
+                <div class="contact-item">
+                    <span>ईमेल आईडी</span>
+                    <a href="mailto:nevernanatures@gmail.com">nevernanatures@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span>आधिकारिक लिंक</span>
+                    <a href="https://nepalmanet.com" target="_blank">nepalmanet.com</a>
+                </div>
+            </div>
+
+            <a href="https://wa.me/919214141611?text=नमस्ते%20Nivarna%20Natures%2C%20प्रोजेक्ट%20सलाह%20हेतु%20संपर्क।" target="_blank" class="btn btn-whatsapp" style="font-size: 1.05rem; padding: 15px 35px;">
+                WhatsApp पर मैसेज भेजें
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Nivarna Natures. All Rights Reserved. | Sitapur, Uttar Pradesh, India</p>
+        <p style="margin-top: 8px;">
+            <a href="https://nepalmanet.com" target="_blank">nepalmanet.com</a> • 
+            <a href="mailto:nevernanatures@gmail.com">nevernanatures@gmail.com</a> • 
+            <a href="tel:9214141611">+91 9214141611</a>
         </p>
-      </div>
-
-      <!-- 4 Camera Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 max-w-3xl mx-auto">
-        <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-3.5 relative h-36 flex flex-col justify-between shadow-inner">
-          <div class="flex justify-between items-center text-[11px]">
-            <span class="text-stone-300 font-semibold">CAM-01 (नॉर्थ साइड)</span>
-            <span class="text-red-400 font-bold flex items-center text-[10px]"><i class="fa-solid fa-circle text-[7px] mr-1 animate-pulse"></i> LIVE</span>
-          </div>
-          <div class="text-center text-stone-500 text-xs"><i class="fa-solid fa-tractor text-2xl mb-1 text-emerald-500"></i><br>समतलीकरण & हैवी मशीनरी प्रोग्रेस</div>
-          <div class="text-[10px] text-stone-400">नेवरना नेचर्स लाइव फीड</div>
-        </div>
-
-        <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-3.5 relative h-36 flex flex-col justify-between shadow-inner">
-          <div class="flex justify-between items-center text-[11px]">
-            <span class="text-stone-300 font-semibold">CAM-02 (साउथ बाउंड्री)</span>
-            <span class="text-red-400 font-bold flex items-center text-[10px]"><i class="fa-solid fa-circle text-[7px] mr-1 animate-pulse"></i> LIVE</span>
-          </div>
-          <div class="text-center text-stone-500 text-xs"><i class="fa-solid fa-shield-halved text-2xl mb-1 text-emerald-500"></i><br>फेंसिंग, गेट & पाथवे निर्माण</div>
-          <div class="text-[10px] text-stone-400">नेवरना नेचर्स लाइव फीड</div>
-        </div>
-
-        <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-3.5 relative h-36 flex flex-col justify-between shadow-inner">
-          <div class="flex justify-between items-center text-[11px]">
-            <span class="text-stone-300 font-semibold">CAM-03 (ईस्ट प्लांटेशन)</span>
-            <span class="text-red-400 font-bold flex items-center text-[10px]"><i class="fa-solid fa-circle text-[7px] mr-1 animate-pulse"></i> LIVE</span>
-          </div>
-          <div class="text-center text-stone-500 text-xs"><i class="fa-solid fa-tree text-2xl mb-1 text-emerald-500"></i><br>टिंबर, ऑर्चर्ड & बेड मेकिंग</div>
-          <div class="text-[10px] text-stone-400">नेवरना नेचर्स लाइव फीड</div>
-        </div>
-
-        <div class="bg-slate-900/90 border border-slate-700/80 rounded-xl p-3.5 relative h-36 flex flex-col justify-between shadow-inner">
-          <div class="flex justify-between items-center text-[11px]">
-            <span class="text-stone-300 font-semibold">CAM-04 (वेस्ट वाटर रिसोर्स)</span>
-            <span class="text-red-400 font-bold flex items-center text-[10px]"><i class="fa-solid fa-circle text-[7px] mr-1 animate-pulse"></i> LIVE</span>
-          </div>
-          <div class="text-center text-stone-500 text-xs"><i class="fa-solid fa-droplet text-2xl mb-1 text-emerald-500"></i><br>इरिगेशन, सोलर पंप & ड्रेनेज</div>
-          <div class="text-[10px] text-stone-400">नेवरना नेचर्स लाइव फीड</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Founder Profile Section -->
-  <section class="py-12 px-4 max-w-5xl mx-auto">
-    <div class="bg-white rounded-3xl p-6 md:p-10 shadow-md border border-stone-200 flex flex-col md:flex-row items-center gap-8">
-      <div class="w-48 h-56 flex-shrink-0 rounded-2xl overflow-hidden shadow-lg border-2 border-emerald-700 bg-stone-200">
-
-      </div>
-      <div class="space-y-4 text-center md:text-left">
-        <div>
-          <span class="text-emerald-700 font-extrabold text-xs uppercase tracking-wider bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-            फाउंडर & टर्नकी लैंड ट्रांसफॉर्मेशन एक्सपर्ट
-          </span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 mt-2">नेवरना नेचर्स (Neverna Natures)</h2>
-          <p class="text-xs font-semibold text-stone-500">प्रैक्टिकल एग्रो-इंजीनियरिंग और बंजर ज़मीन कायाकल्प विशेषज्ञ</p>
-        </div>
-        <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
-          "हमारा उद्देश्य केवल ज़मीन की सफाई करना नहीं, बल्कि आपकी अनुपयोगी या बंजर ज़मीन को एक ऐसा स्वावलंबी, खूबसूरत और उच्च रिटर्न देने वाला एसेट बनाना है, जिससे आपको गर्व और निश्चित आय दोनों प्राप्त हों। 100% ऑन-ग्राउंड पारदर्शिता हमारा मूल संकल्प है।"
-        </p>
-        <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-3">
-          <a href="https://wa.me/919956207223?text=नमस्ते%20नेवरना%20नेचर्स,%20मुझे%20अपनी%20ज़मीन%20डेवलपमेंट%20के%20बारे%20में%20बात%20करनी%20है।" target="_blank" class="bg-emerald-800 hover:bg-emerald-700 text-white font-bold px-4 py-2.5 rounded-xl text-xs flex items-center shadow-sm">
-            <i class="fa-brands fa-whatsapp mr-1.5 text-base"></i> सीधे संपर्क करें
-          </a>
-          <a href="https://www.youtube.com/@nevernanatures" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold px-4 py-2.5 rounded-xl text-xs flex items-center shadow-sm">
-            <i class="fa-brands fa-youtube mr-1.5 text-base"></i> यूट्यूब पर काम देखें
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6 Specialized Development Models -->
-  <section class="py-12 bg-stone-100 border-y border-stone-200 px-4">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center max-w-2xl mx-auto mb-10">
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900">कस्टमाइज़्ड लैंड ट्रांसफॉर्मेशन मॉडल्स</h2>
-        <p class="text-stone-600 text-xs sm:text-sm mt-1">आपकी ज़मीन, आपकी प्राथमिकता — नेवरना नेचर्स तैयार करता है उसी के अनुसार सटीक लेआउट</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        
-        <!-- Model 1 -->
-        <div class="bg-white p-5 rounded-2xl shadow-sm border border-stone-200 hover:border-emerald-500 transition">
-          <div class="w-12 h-12 bg-emerald-100 text-emerald-800 rounded-xl flex items-center justify-center text-xl mb-4">
-            <i class="fa-solid fa-campground"></i>
-          </div>
-          <h3 class="font-extrabold text-stone-900 text-base">1. एग्रो-टूरिज्म & वेलनेस पार्क</h3>
-          <p class="text-stone-600 text-xs mt-2 leading-relaxed">
-            नेचुरल कॉटेज, वीकेंड पिकनिक स्पॉट, ग्रीन वॉकवे और प्राकृतिक वातावरण जो पर्यटकों को आकर्षित करे और नियमित किराया दे।
-          </p>
-        </div>
-
-        <!-- Model 2 -->
-        <div class="bg-white p-5 rounded-2xl shadow-sm border border-stone-200 hover:border-emerald-500 transition">
-          <div class="w-12 h-12 bg-emerald-100 text-emerald-800 rounded-xl flex items-center justify-center text-xl mb-4">
-            <i class="fa-solid fa-tree"></i>
-          </div>
-          <h3 class="font-extrabold text-stone-900 text-base">2. हाई-वैल्यू टिंबर एग्रो-फॉरेस्ट्री</h3>
-          <p class="text-stone-600 text-xs mt-2 leading-relaxed">
-            महोगनी, सागवान, चंदन व कीमती इमारती लकड़ियों का वैज्ञानिक पौधारोपण जो 10–12 वर्षों में विशाल वेल्थ तैयार करे।
-          </p>
-        </div>
-
-        <!-- Model 3 -->
-        <div class="bg-white p-5 rounded-2xl shadow-sm border border-stone-200 hover:border-emerald-500 transition">
-          <div class="w-12 h-12 bg-emerald-100 text-emerald-800 rounded-xl flex items-center justify-center text-xl mb-4">
-            <i class="fa-solid fa-apple-whole"></i>
-          </div>
-          <h3 class="font-extrabold text-stone-900 text-base">3. कमर्शियल फ्रूट ऑर्चर्ड (बागवानी)</h3>
-          <p class="text-stone-600 text-xs mt-2 leading-relaxed">
-            अमरूद, अंजीर, ड्रैगन फ्रूट, मौसमी फल व इंटरक्रॉपिंग का हाई-यील्ड प्लांटेशन जो हर मौसम में सुरक्षित कैश फ्लो दे।
-          </p>
-        </div>
-
-        <!-- Model 4 -->
-        <div class="bg-white p-5 rounded-2xl shadow-sm border border-stone-200 hover:border-emerald-500 transition">
-          <div class="w-12 h-12 bg-emerald-100 text-emerald-800 rounded-xl flex items-center justify-center text-xl mb-4">
-            <i class="fa-solid fa-spa"></i>
-          </div>
-          <h3 class="font-extrabold text-stone-900 text-base">4. फ्लोरीकल्चर & मेडिसिनल ज़ोन</h3>
-          <p class="text-stone-600 text-xs mt-2 leading-relaxed">
-            हाई-डिमांड ताज़ा फूलों की खेती और सुगंधित/औषधीय पौधे जो कम समय में त्वरित आय और खूबसूरती प्रदान करते हैं।
-          </p>
-        </div>
-
-        <!-- Model 5 -->
-        <div class="bg-white p-5 rounded-2xl shadow-sm border border-stone-200 hover:border-emerald-500 transition">
-          <div class="w-12 h-12 bg-emerald-100 text-emerald-800 rounded-xl flex items-center justify-center text-xl mb-4">
-            <i class="fa-solid fa-map-location-dot"></i>
-          </div>
-          <h3 class="font-extrabold text-stone-900 text-base">5. एस्टेट प्लॉटिंग & लेआउट</h3>
-          <p class="text-stone-600 text-xs mt-2 leading-relaxed">
-            ज़मीन को प्रीमियम फार्म-प्लॉट्स में बांटने के लिए रोड कटिंग, गेटेड फेंसिंग, स्ट्रीट लाइट्स और लैंडस्कैपिंग।
-          </p>
-        </div>
-
-        <!-- Model 6 -->
-        <div class="bg-white p-5 rounded-2xl shadow-sm border border-stone-200 hover:border-emerald-500 transition">
-          <div class="w-12 h-12 bg-emerald-100 text-emerald-800 rounded-xl flex items-center justify-center text-xl mb-4">
-            <i class="fa-solid fa-house-chimney-window"></i>
-          </div>
-          <h3 class="font-extrabold text-stone-900 text-base">6. प्राइवेट वुडन हाउस & रिट्रीट</h3>
-          <p class="text-stone-600 text-xs mt-2 leading-relaxed">
-            1 एकड़ से कम ज़मीन के लिए विशेष: बिना किसी व्यावसायिक झंझट के आपके निजी सुकून के लिए लकड़ी का घर और गार्डन।
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Investment Plans Section -->
-  <section id="plans" class="py-14 px-4 max-w-5xl mx-auto">
-    <div class="text-center max-w-2xl mx-auto mb-10">
-      <span class="text-emerald-700 text-xs font-black uppercase tracking-wider bg-emerald-100 px-3 py-1 rounded-full">
-        फाइनेंशियल & डेवलपमेंट मॉडल्स
-      </span>
-      <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 mt-2">6 वर्ष बनाम 12 वर्ष कैपिटल रिटर्न प्लान</h2>
-      <p class="text-stone-600 text-xs sm:text-sm mt-1">अपनी वित्तीय योजना और विज़न के अनुसार नेवरना नेचर्स का सबसे उपयुक्त प्लान चुनें</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      
-      <!-- 6 Year Plan -->
-      <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-md border-2 border-stone-200 hover:border-emerald-600 transition flex flex-col justify-between">
-        <div>
-          <span class="text-xs font-bold bg-stone-100 text-stone-700 px-3 py-1 rounded-full uppercase">स्टैंडर्ड टर्नकी</span>
-          <h3 class="text-2xl font-black text-stone-900 mt-3">6-वर्षीय डायरेक्ट प्लान</h3>
-          <p class="text-xs text-stone-500 mt-1">पूर्ण मालिकाना हक और तत्काल उत्पादन के लिए</p>
-          
-          <ul class="mt-6 space-y-3 text-xs sm:text-sm text-stone-700">
-            <li class="flex items-start"><i class="fa-solid fa-check text-emerald-600 mt-0.5 mr-2.5"></i> <span><strong>फुल पेमेंट मॉडल:</strong> लैंड ओनर द्वारा कार्य के माइलस्टोन के अनुसार भुगतान।</span></li>
-            <li class="flex items-start"><i class="fa-solid fa-check text-emerald-600 mt-0.5 mr-2.5"></i> <span><strong>100% ओनरशिप:</strong> पहले दिन से ज़मीन की पूरी उपज और मुनाफा ओनर का।</span></li>
-            <li class="flex items-start"><i class="fa-solid fa-check text-emerald-600 mt-0.5 mr-2.5"></i> <span><strong>24×7 लाइव CCTV:</strong> पूरे 6 वर्षों तक पारदर्शी निगरानी।</span></li>
-            <li class="flex items-start"><i class="fa-solid fa-check text-emerald-600 mt-0.5 mr-2.5"></i> <span><strong>न्यूनतम रकबा:</strong> 1 एकड़ (1 एकड़ से कम पर केवल पर्सनल कॉटेज लागू)।</span></li>
-          </ul>
-        </div>
-        <div class="mt-8">
-          <a href="#inquiry" class="block text-center w-full bg-stone-900 hover:bg-stone-800 text-white font-bold py-3 rounded-xl text-xs transition">
-            6-वर्षीय प्लान के लिए संपर्क करें
-          </a>
-        </div>
-      </div>
-
-      <!-- 12 Year Plan -->
-      <div class="bg-gradient-to-b from-emerald-950 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl border-2 border-emerald-500 flex flex-col justify-between relative overflow-hidden">
-        <div class="absolute top-4 right-4 bg-emerald-500 text-stone-950 font-black text-[10px] px-2.5 py-1 rounded-full uppercase">
-          100% कैपिटल रिटर्न
-        </div>
-        <div>
-          <span class="text-xs font-bold bg-emerald-900/80 text-emerald-300 px-3 py-1 rounded-full uppercase">पार्टनरशिप मॉडल</span>
-          <h3 class="text-2xl font-black text-white mt-3">12-वर्षीय रिटर्न प्लान</h3>
-          <p class="text-xs text-stone-300 mt-1">शून्य वित्तीय जोखिम — विकास लागत का पूर्ण रिटर्न</p>
-          
-          <ul class="mt-6 space-y-3 text-xs sm:text-sm text-stone-200">
-            <li class="flex items-start"><i class="fa-solid fa-circle-check text-emerald-400 mt-0.5 mr-2.5"></i> <span><strong>कैपिटल बैक गारंटी:</strong> 12 वर्षों के चक्र में ओनर का डेवलपमेंट भुगतान वापस।</span></li>
-            <li class="flex items-start"><i class="fa-solid fa-circle-check text-emerald-400 mt-0.5 mr-2.5"></i> <span><strong>टिंबर & टूरिज्म रिकवरी:</strong> महोगनी, सागवान व एग्रो-रिट्रीट द्वारा आय चक्र।</span></li>
-            <li class="flex items-start"><i class="fa-solid fa-circle-check text-emerald-400 mt-0.5 mr-2.5"></i> <span><strong>नो-स्ट्रेस मेंटेनेंस:</strong> 12 साल तक सम्पूर्ण तकनीकी देखरेख नेवरना नेचर्स की।</span></li>
-            <li class="flex items-start"><i class="fa-solid fa-circle-check text-emerald-400 mt-0.5 mr-2.5"></i> <span><strong>नियम:</strong> कम से कम 1 एकड़ रकबा अनिवार्य (जितना कम रकबा, समय उतना अधिक)।</span></li>
-          </ul>
-        </div>
-        <div class="mt-8">
-          <a href="https://wa.me/919956207223?text=नमस्ते%20नेवरना%20नेचर्स,%20मुझे%2012-वर्षीय%20कैपिटल%20रिटर्न%20प्लान%20की%20जानकारी%20चाहिए।" target="_blank" class="block text-center w-full bg-emerald-500 hover:bg-emerald-400 text-stone-950 font-black py-3 rounded-xl text-xs transition shadow-lg">
-            12-वर्षीय रिटर्न प्लान बुक करें
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Step-by-Step Execution Workflow -->
-  <section class="py-12 bg-white border-y border-stone-200 px-4">
-    <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-10">
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900">जमीन विकास की 5-चरणीय कार्यप्रणाली</h2>
-        <p class="text-stone-600 text-xs sm:text-sm mt-1">सर्वेक्षण से लेकर पूर्ण विकसित फार्म सौंपने तक का सफर</p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3.5">
-        <div class="bg-stone-50 p-4 rounded-2xl border border-stone-200 text-center">
-          <div class="w-9 h-9 bg-emerald-800 text-white rounded-xl flex items-center justify-center font-black text-sm mx-auto mb-2.5">1</div>
-          <h3 class="font-bold text-xs text-stone-900">साइट सर्वे</h3>
-          <p class="text-[11px] text-stone-600 mt-1">ज़मीन की स्थिति, ढलान, पानी और सॉइल प्रोफाइलिंग।</p>
-        </div>
-
-        <div class="bg-stone-50 p-4 rounded-2xl border border-stone-200 text-center">
-          <div class="w-9 h-9 bg-emerald-800 text-white rounded-xl flex items-center justify-center font-black text-sm mx-auto mb-2.5">2</div>
-          <h3 class="font-bold text-xs text-stone-900">CCTV पोल</h3>
-          <p class="text-[11px] text-stone-600 mt-1">खेत के केंद्र में 4 कैमरों का सोलर/4G पोल इंस्टॉलेशन।</p>
-        </div>
-
-        <div class="bg-stone-50 p-4 rounded-2xl border border-stone-200 text-center">
-          <div class="w-9 h-9 bg-emerald-800 text-white rounded-xl flex items-center justify-center font-black text-sm mx-auto mb-2.5">3</div>
-          <h3 class="font-bold text-xs text-stone-900">मास्टर लेआउट</h3>
-          <p class="text-[11px] text-stone-600 mt-1">ओनर के विज़न अनुसार 6/12 वर्ष का ब्लू-प्रिंट डिज़ाइन।</p>
-        </div>
-
-        <div class="bg-stone-50 p-4 rounded-2xl border border-stone-200 text-center">
-          <div class="w-9 h-9 bg-emerald-800 text-white rounded-xl flex items-center justify-center font-black text-sm mx-auto mb-2.5">4</div>
-          <h3 class="font-bold text-xs text-stone-900">मशीनरी & वर्क</h3>
-          <p class="text-[11px] text-stone-600 mt-1">समतलीकरण, फेंसिंग, इरिगेशन और हाई-डेंसिटी रोपण।</p>
-        </div>
-
-        <div class="bg-stone-50 p-4 rounded-2xl border border-stone-200 text-center">
-          <div class="w-9 h-9 bg-emerald-800 text-white rounded-xl flex items-center justify-center font-black text-sm mx-auto mb-2.5">5</div>
-          <h3 class="font-bold text-xs text-stone-900">हैंडओवर / रिटर्न</h3>
-          <p class="text-[11px] text-stone-600 mt-1">विकसित फार्महाउस डिलीवरी या निरंतर रिटर्न पार्टनरशिप।</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Inquiry Booking Form -->
-  <section id="inquiry" class="py-12 px-4 max-w-3xl mx-auto">
-    <div class="bg-white rounded-3xl shadow-lg border border-stone-200 p-6 sm:p-8">
-      <div class="text-center mb-6">
-        <h2 class="text-2xl font-black text-stone-900">अपनी ज़मीन डेवलपमेंट के लिए संपर्क करें</h2>
-        <p class="text-stone-600 text-xs sm:text-sm mt-1">सीधे WhatsApp पर विवरण भेजें या नीचे दिया गया फॉर्म भरें</p>
-      </div>
-
-      <div class="mb-6">
-        <a href="https://wa.me/919956207223?text=नमस्ते%20नेवरना%20नेचर्स,%20मुझे%20अपनी%20ज़मीन%20डेवलप%20कराने%20के%20लिए%20कंसल्टेशन%20चाहिए।" target="_blank" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3.5 px-4 rounded-2xl shadow flex items-center justify-center text-sm transition">
-          <i class="fa-brands fa-whatsapp text-xl mr-2"></i> WhatsApp पर डायरेक्ट मैसेज भेजें (9956207223)
-        </a>
-      </div>
-
-      <div class="relative flex py-2 items-center mb-4">
-        <div class="flex-grow border-t border-stone-300"></div>
-        <span class="flex-shrink mx-4 text-stone-400 text-xs uppercase font-bold">या विवरण दर्ज करें</span>
-        <div class="flex-grow border-t border-stone-300"></div>
-      </div>
-
-      <form class="space-y-4">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-xs font-bold text-stone-700 mb-1">आपका नाम</label>
-            <input type="text" placeholder="पूरा नाम दर्ज करें" class="w-full px-3.5 py-2.5 text-sm border border-stone-300 rounded-xl focus:outline-emerald-600">
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-stone-700 mb-1">मोबाइल नंबर</label>
-            <input type="tel" placeholder="10 अंकों का नंबर" class="w-full px-3.5 py-2.5 text-sm border border-stone-300 rounded-xl focus:outline-emerald-600">
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-xs font-bold text-stone-700 mb-1">ज़मीन का रकबा</label>
-            <input type="text" placeholder="उदा. 1 एकड़, 5 एकड़ (न्यूनतम 1 एकड़)" class="w-full px-3.5 py-2.5 text-sm border border-stone-300 rounded-xl focus:outline-emerald-600">
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-stone-700 mb-1">ज़मीन का जिला / स्थान</label>
-            <input type="text" placeholder="उदा. लखनऊ, उन्नाव, बाराबंकी" class="w-full px-3.5 py-2.5 text-sm border border-stone-300 rounded-xl focus:outline-emerald-600">
-          </div>
-        </div>
-
-        <div>
-          <label class="block text-xs font-bold text-stone-700 mb-1">पसंदीदा मॉडल</label>
-          <select class="w-full px-3.5 py-2.5 text-sm border border-stone-300 rounded-xl focus:outline-emerald-600">
-            <option>12-वर्षीय कैपिटल रिटर्न पार्टनरशिप (न्यूनतम 1 एकड़)</option>
-            <option>6-वर्षीय डायरेक्ट टर्नकी डेवलपमेंट (न्यूनतम 1 एकड़)</option>
-            <option>एग्रो-टूरिज्म & वेलनेस फार्महाउस</option>
-            <option>हाई-वैल्यू टिंबर एग्रो-फॉरेस्ट्री</option>
-            <option>कमर्शियल फ्रूट ऑर्चर्ड (बागवानी)</option>
-            <option>निजी वुडन हाउस & गार्डन (1 एकड़ से कम)</option>
-          </select>
-        </div>
-
-        <button type="button" class="w-full bg-emerald-900 hover:bg-emerald-800 text-white font-bold py-3.5 rounded-xl text-sm shadow transition">
-          प्रोजेक्ट सर्वे & कंसल्टेशन बुक करें
-        </button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-stone-950 text-stone-400 text-xs py-10 px-4 border-t border-stone-800">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
-      <div>
-        <div class="text-stone-100 font-extrabold text-lg">नेवरना नेचर्स (Neverna Natures)</div>
-        <div class="text-stone-400 mt-1">Official Portal: www.nevernanatures.com</div>
-        <div>Email: nevernanatures@gmail.com</div>
-        <div class="text-emerald-400 mt-1 font-semibold"><i class="fa-brands fa-whatsapp mr-1"></i> WhatsApp: +91 9956207223</div>
-      </div>
-      <div>
-        <a href="https://www.youtube.com/@nevernanatures" target="_blank" class="inline-flex items-center bg-red-600/20 text-red-400 border border-red-500/30 px-4 py-2 rounded-xl hover:bg-red-600/30 transition">
-          <i class="fa-brands fa-youtube text-xl mr-2 text-red-500"></i> हमारे यूट्यूब चैनल (नेवरना नेचर्स) पर विजिट करें
-        </a>
-      </div>
-    </div>
-    <div class="text-center text-stone-600 mt-8 border-t border-stone-900 pt-5">
-      &copy; 2026 नेवरना नेचर्स (Neverna Natures). All Rights Reserved. Turnkey Land & Wasteland Transformation Specialist.
-    </div>
-  </footer>
-
-  <!-- Sticky Mobile WhatsApp Button -->
-  <a href="https://wa.me/919956207223?text=नमस्ते%20नेवरना%20नेचर्स,%20मुझे%20अपनी%20ज़मीन%20डेवलपमेंट%20के%20बारे%20में%20जानकारी%20चाहिए।" target="_blank" class="fixed bottom-5 right-5 z-50 bg-green-500 hover:bg-green-600 text-white p-3.5 rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110">
-    <i class="fa-brands fa-whatsapp text-2xl"></i>
-  </a>
+    </footer>
 
 </body>
 </html>
